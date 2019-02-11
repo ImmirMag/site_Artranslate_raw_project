@@ -1,0 +1,66 @@
+{% extends "template.html" %}
+
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<script>
+	$(document).ready( function() {
+		$("#load").bind("click", function () {
+		var admin = "Admin";
+			$.ajax({
+				url: ".py",
+				type: "POST",
+				data: ({name: admin}),
+				dataType: "html",
+				beforeSend: funcBefore,
+				success: funcSuccess
+			});
+
+		});
+	});
+
+	function funcBefore() {
+		$("#info").text ("Wait data ... ");
+	}
+
+	function funcSuccess(data) {
+		$("#info").text (data);
+	}
+
+</script>
+
+<script>
+    var word = []
+</script>
+
+
+<script>
+    function change(){
+
+    document.getElementById("Art").innerHTML = word[1]
+    }
+</script>
+
+
+<div align="center">
+
+    <br>
+
+    <div style="width: 90%; height: 800px;  box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+
+
+
+        <div align="center" style="font-family: 'Varela Round', sans-serif; font-size: 40px">
+            <font id="Art" onclick="change()">Article</font>
+            <br>
+            <br>
+            <font id="Art2" onclick="refresh()" style="visibility: hidden">Article</font>
+
+            <p id="#load", style="cursor: pointer;"> Загрузить данные </p>
+
+            {{data}}
+
+        </div>
+    </div>
+</div>
+{% endblock %}

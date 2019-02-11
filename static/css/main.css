@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round")
+
+.body{
+padding: 0px;
+margin: 0px;
+}
+
+.container{
+margin: 0px;
+padding: 0px;
+}
+
+.main{
+	border-radius: 10%;
+	background:  white;
+	font-family: 'Ubuntu Light', sans-serif;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	display: inline-block;
+	text-align: center;
+	border: 0px solid black;
+	width: 500px;
+	margin: 50px;
+	padding: 15px;
+	border-radius: 1%;
+    vertical-align: top;
+}
+
+.footer{
+	padding: 15px;
+    background: #212529;
+    color: white;
+}
+
+.upload{
+font-family: 'Ubuntu Light', sans-serif;
+font-size: 20px;
+width: 50%;
+color: black;
+background: white;
+border: 0;
+}
+
+.upload:hover{
+    color: gray;
+    text-shadow: #5dc8e5 0 0 10px; /* Свечение голубого цвета */
+    color: #0083bd;
+}
+
+.spec{
+font-family: 'Ubuntu Light', sans-serif;
+font-size: 25px;
+width: 100%;
+}
+
+::-webkit-file-upload-button {
+font-family: 'Ubuntu Light', sans-serif;
+width: 100%;
+padding: 6px;
+border: 0;
+margin-right: 25%;
+color: white;
+background: #212529;
+}
+
+button:focus {
+    outline: none;
+}

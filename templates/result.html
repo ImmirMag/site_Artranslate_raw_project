@@ -1,0 +1,71 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+<script>
+var data = [0]
+var percent = [0]
+</script>
+
+{% for key,value in statistic.items %}
+<script>
+data.push({{ key }})
+percent.push({{ value }})
+</script>
+{% endfor %}
+
+
+<div align="center" style="padding: 6px;border: 0px solid blue;padding-top: 40px">
+
+    <div style="display: inline-block;border: 0px solid red;width: 700px;font-family: 'Varela Round', sans-serif;font-size: 36px; ">
+
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <br>
+        <br>
+        <a href="/learn/">Go to Learn Cards  <i class="fas fa-bookmark fa-2x"></i></a>
+    </div>
+
+
+
+    <div style="width: 50%;display: inline-block;border: 0px solid green; vertical-align: top; padding: 12px;">
+        <div style="width: 100%" >
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+{% for key,value in statistic.items %}
+
+{{ key }}
+{{ value }}
+
+{% endfor %}
+
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels:percent,
+                datasets: [{
+                    label: "",
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: data,
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+    </script>
+
+</div>
+
+{% endblock %}

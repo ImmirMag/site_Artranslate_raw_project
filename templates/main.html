@@ -1,0 +1,65 @@
+{% extends "template.html" %}
+
+{% block content %}
+<br>
+<br>
+<br>
+
+<div class="container" align="center">
+
+	<div  class="main" >
+		<h2> Words on Learning </h2> <br>
+		<a href="/learn/"><i class="fas fa-bookmark fa-10x"></i></a>  <br> <br>
+		In your dictionary save all words, what you are added yorself
+	</div>
+
+	<div class="main">
+		<form action="/result/" method="post" enctype="multipart/form-data">
+
+			<h2> Upload New File </h2> <br>
+
+			<button class="upload" type="submit"><i class="fas fa-upload fa-8x"> </i> </button>
+
+			<br><br>
+			In your dictionary save all words, what you are added yorself
+			<p></p>
+
+			<div align="left">
+				{% csrf_token %}
+				<br> {{ form.file }}<br> <br>
+			</div>
+
+        </form>
+	</div>
+
+
+	<div  class="main" >
+		<h2> Your Dictionary </h2> <br>
+		<a href="/dictionary/"><i class="fas fa-book fa-10x"></i></a> <br> <br>
+		In your dictionary save all words, what you are added yorself
+	</div>
+
+
+
+</div>
+
+
+
+<div align="center">
+	<div align="center" style="
+	font-family: 'Varela Round', sans-serif;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 85%;">
+
+		 <font size="101px">
+			 Hello, {{login}}! Today we are can do a lot of things
+		 It allows for some design aspects to be considered, specifically regarding the call-to-action button and, more importantly, attracts higher engagement rates as it is less intrusive than a blatant sales pitch.
+		 </font>
+
+	</div>
+</div>
+
+
+{% endblock %}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>Artranslate</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+</head>
+<body style="margin: 0px;">
+
+<div align="left" style="background: #EE82EE; font-family: 'Varela Round', sans-serif; padding: 3px;">
+	<a href="/main/" style="text-decoration: none"><font style="font-size: 28px; color: white;text-shadow: #000000 0 0 10px;margin-left: 20px;">Artranslate</font></a>
+	<a href="/check/">
+		<i class="fas fa-sign-out-alt fa-2x" style="float: right; color: white; text-shadow: #000000 0 0 5px;margin-right: 10px;">
+			<font style=" font-family: 'Varela Round', sans-serif; font-size: 20px;vertical-align: middle">Logout</font>
+		</i>
+	</a>
+</div>
+
+
+{% block content %}    {% endblock %}
+
+</body>
+</html>
